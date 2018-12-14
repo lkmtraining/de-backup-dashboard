@@ -1,0 +1,39 @@
+<h5 class="modal-title" id="detailsModalLabel">Backup Details - {{ host.host }}  </h5>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">Start Time</th>
+      <th scope="col">Status</th>
+      <th scope="col">Finish Time</th>
+      <th scope="col">File Name</th>
+      <th scope="col">Location</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for bk in backups %}
+      <tr>
+        <td>{{ bk.start_time }}</td>
+        {% if bk.state == "finished" %}
+          <td><span class="badge badge-pill badge-success">Successful</span></td>
+        {% else %}
+          <td><span class="badge badge-pill badge-warning">Running</span></td>
+        {% endif %}
+        {% if bk.finish_time %}
+          <td>{{ bk.finish_time }}</td>
+        {% else %}
+          <td>Unknown</td>
+        {% endif %}
+        {% if bk.filename %}
+          <td>{{ bk.filename }}</td>
+        {% else %}
+          <td>Unknown</td>
+        {% endif %}
+        {% if bk.location %}
+          <td>{{ bk.location }}</td>
+        {% else %}
+          <td>Unknown</td>
+        {% endif %}
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
