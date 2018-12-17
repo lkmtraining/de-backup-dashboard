@@ -21,9 +21,9 @@ WORKDIR /app
 
 COPY . /app
 
-COPY static_app /app
+COPY static /app
 
-ADD static /app/static_app
+ADD static /app/static
 
 EXPOSE 80
 ENTRYPOINT ["python3", "manage.py"]
