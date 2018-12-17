@@ -25,7 +25,6 @@ jsonpointer==1.10
 jsonschema==2.6.0
 MarkupSafe==1.0
 oauthlib==2.0.6
-PAM==0.4.2
 pyasn1==0.4.2
 pyasn1-modules==0.2.1
 pycparser==2.19
@@ -76,7 +75,6 @@ jsonpointer==1.10
 jsonschema==2.6.0
 MarkupSafe==1.0
 oauthlib==2.0.6
-PAM==0.4.2
 pyasn1==0.4.2
 pyasn1-modules==0.2.1
 pycparser==2.19
