@@ -19,9 +19,11 @@ RUN python3 -m pip install -r /app/requirements.txt
 
 WORKDIR /app
 
-COPY * /app
+COPY . /app
 
 WORKDIR /app
+
+ADD static /app/static
 
 EXPOSE 80
 ENTRYPOINT ["python3", "manage.py"]
