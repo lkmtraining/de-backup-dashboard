@@ -7,5 +7,5 @@ WORKDIR /app
 
 COPY * /app/
 
-ENTRYPOINT [ "python" ]
-CMD [ "manage.py" ]
+ENTRYPOINT [ "python3" ]
+CMD [ "python3 manage.py" ]
