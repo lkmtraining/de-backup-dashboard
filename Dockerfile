@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 
 RUN apt-get update
 RUN apt-get install -y software-properties-common vim
@@ -10,6 +10,10 @@ RUN apt-get install -y git
 
 # update pip
 RUN python3.6 -m pip install pip --upgrade
+
+RUN pip install pipenv
+
+RUN pipenv install --system --deploy
 
 COPY ./requirements.txt /app/requirements.txt
 
