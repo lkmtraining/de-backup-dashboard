@@ -46,7 +46,9 @@ CMD ["mongod"]
 EXPOSE 27017
 EXPOSE 28017
 
+WORKDIR /app
+
 EXPOSE 8000
 STOPSIGNAL SIGINT
-ENTRYPOINT ["python3", "/app/manage.py"]
-CMD ["runserver", "0.0.0.0:80"]
+ENTRYPOINT ["python3", "manage.py"]
+CMD ["runserver", "0.0.0.0:8000"]
