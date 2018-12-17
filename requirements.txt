@@ -41,7 +41,6 @@ requests-unixsocket==0.1.5
 service-identity==16.0.0
 six==1.11.0
 sqlparse==0.2.4
-systemd-python==234
 Twisted==17.9.0
 ufw==0.35
 unattended-upgrades==0.1
@@ -90,7 +89,6 @@ requests-unixsocket==0.1.5
 service-identity==16.0.0
 six==1.11.0
 sqlparse==0.2.4
-systemd-python==234
 Twisted==17.9.0
 ufw==0.35
 unattended-upgrades==0.1
