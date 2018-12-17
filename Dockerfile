@@ -26,7 +26,7 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 RUN \
   apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 2930ADAE8CAF5059EE73BB4B58712A2291FA4AD5 && \
-  echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.6 multiverse" >  /etc/apt/sources.list.d/mongodb-org-3.6.list && \
+  echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/3.6 multiverse" >  /etc/apt/sources.list.d/mongodb-org-3.6.list && \
   apt update && \
   apt install -y mongodb-org 
  
@@ -48,6 +48,6 @@ EXPOSE 28017
 
 WORKDIR /app
 
-EXPOSE 8000
+EXPOSE 80
 ENTRYPOINT ["python3", "manage.py"]
-CMD ["runserver", "0.0.0.0:8000"]
+CMD ["runserver", "0:80"]
