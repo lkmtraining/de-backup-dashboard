@@ -25,6 +25,8 @@ COPY static /app
 
 ADD static /app/static
 
+RUN python3 manage.py collectstatic --noinput
+
 EXPOSE 80
 ENTRYPOINT ["python3", "manage.py"]
 CMD ["runserver", "0:80"]
