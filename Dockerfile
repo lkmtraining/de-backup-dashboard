@@ -21,5 +21,5 @@ WORKDIR /app
 
 COPY * /app/
 
-CMD ["python3", "./app/manage.py runserver 0:80" ]
+CMD ["python3", "/app/manage.py runserver 0:80" ]
 #CMD ["/app/manage.py", "runserver 0:80"]
