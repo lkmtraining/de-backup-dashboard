@@ -21,8 +21,8 @@ WORKDIR /app
 
 COPY * /app/
 
-#CMD ["python3", "/app/manage.py runserver 0:80" ]
-#CMD ["/app/manage.py", "runserver 0:80"]
+ENV TZ=Europe/Minsk
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 RUN \
   apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 2930ADAE8CAF5059EE73BB4B58712A2291FA4AD5 && \
