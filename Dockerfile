@@ -1,12 +1,12 @@
 FROM python:3.6
 
-RUN pip install --upgrade pip
+RUN pip3install --upgrade pip
 
 COPY ./requirements.txt /app/requirements.txt
 
 WORKDIR /app
 
-RUN pip install -r requirements.txt
+RUN pip3 install -r requirements.txt
 
 COPY * /app
 
