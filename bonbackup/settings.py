@@ -25,7 +25,7 @@ SECRET_KEY = '9+11mry-a@)@^^2+adl$buy*x8f@9$nl@=2yd$))rr-e06dbf*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['192.168.33.100','localhost','bonbackup.com']
+ALLOWED_HOSTS = ['10.80.131.240','localhost','bonbackup.com']
 
 
 # Application definition
@@ -80,7 +80,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'djongo',
         'NAME': 'bonbackup',
-        'ENFORCE_SCHEMA': False
+        'ENFORCE_SCHEMA': False,
+        'HOST': '10.80.131.241'
     }
 }
 

@@ -21,33 +21,6 @@ WORKDIR /app
 
 COPY * /app/
 
-ENV TZ=Europe/Minsk
-RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
-
-RUN \
-  apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 2930ADAE8CAF5059EE73BB4B58712A2291FA4AD5 && \
-  echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/3.6 multiverse" >  /etc/apt/sources.list.d/mongodb-org-3.6.list && \
-  apt update && \
-  apt install -y mongodb-org 
- 
-
-# Define mountable directories.
-VOLUME ["/data/db"]
-
-# Define working directory.
-WORKDIR /data
-
-# Define default command.
-CMD ["mongod"]
-
-# Expose ports.
-#   - 27017: process
-#   - 28017: http
-EXPOSE 27017
-EXPOSE 28017
-
-WORKDIR /app
-
 EXPOSE 80
 ENTRYPOINT ["python3", "manage.py"]
 CMD ["runserver", "0:80"]
