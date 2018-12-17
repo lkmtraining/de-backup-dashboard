@@ -21,5 +21,10 @@ WORKDIR /app
 
 COPY * /app/
 
-CMD ["python3", "/app/manage.py runserver 0:80" ]
+#CMD ["python3", "/app/manage.py runserver 0:80" ]
 #CMD ["/app/manage.py", "runserver 0:80"]
+
+EXPOSE 8000
+STOPSIGNAL SIGINT
+ENTRYPOINT ["python3", "manage.py"]
+CMD ["runserver", "0.0.0.0:8000"]
