@@ -5,7 +5,7 @@ COPY ./requirements.txt /app/requirements.txt
 WORKDIR /app
 
 
-COPY * /app
+COPY * /app/
 
 ENTRYPOINT [ "python" ]
 CMD [ "manage.py" ]
