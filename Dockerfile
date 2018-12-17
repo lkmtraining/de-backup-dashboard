@@ -1,7 +1,5 @@
 FROM python:3.6
 
-RUN pip3install --upgrade pip
-
 COPY ./requirements.txt /app/requirements.txt
 
 WORKDIR /app
