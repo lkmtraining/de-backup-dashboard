@@ -17,6 +17,8 @@ RUN pipenv install --system --deploy
 
 COPY ./requirements.txt /app/requirements.txt
 
+RUN python3 -m pip install -r requirements.txt
+
 WORKDIR /app
 
 COPY * /app/
