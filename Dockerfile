@@ -21,6 +21,8 @@ WORKDIR /app
 
 COPY * /app/
 
+WORKDIR /app
+
 EXPOSE 80
 ENTRYPOINT ["python3", "manage.py"]
 CMD ["runserver", "0:80"]
