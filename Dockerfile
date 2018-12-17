@@ -1,5 +1,12 @@
 FROM python:3.6
 
+ENV PYENV_ROOT $HOME/.pyenv
+ENV PATH $PYENV_ROOT/shims:$PYENV_ROOT/bin:$PATH
+
+RUN pyenv install 3.6
+RUN pyenv global 3.6
+RUN pyenv rehash
+
 COPY ./requirements.txt /app/requirements.txt
 
 WORKDIR /app
