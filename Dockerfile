@@ -13,8 +13,6 @@ RUN python3.6 -m pip install pip --upgrade
 
 RUN pip install pipenv
 
-RUN pipenv install --system --deploy
-
 COPY ./requirements.txt /app/requirements.txt
 
 RUN python3 -m pip install -r requirements.txt
