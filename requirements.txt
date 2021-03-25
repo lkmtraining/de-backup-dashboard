@@ -35,7 +35,7 @@ pyOpenSSL==17.5.0
 pyserial==3.4
 python-debian==0.1.32
 pytz==2018.7
-PyYAML==3.12
+PyYAML==5.4
 requests==2.20.1
 requests-unixsocket==0.1.5
 service-identity==16.0.0
@@ -82,7 +82,7 @@ pyOpenSSL==17.5.0
 pyserial==3.4
 python-debian==0.1.32
 pytz==2018.7
-PyYAML==3.12
+PyYAML==5.4
 requests==2.20.1
 requests-unixsocket==0.1.5
 service-identity==16.0.0
