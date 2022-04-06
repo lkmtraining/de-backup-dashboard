@@ -41,7 +41,7 @@ requests-unixsocket==0.1.5
 service-identity==16.0.0
 six==1.11.0
 sqlparse==0.2.4
-Twisted==17.9.0
+Twisted==22.2.0
 unattended-upgrades==0.1
 urllib3==1.22
 zope.interface==4.3.2
@@ -88,7 +88,7 @@ requests-unixsocket==0.1.5
 service-identity==16.0.0
 six==1.11.0
 sqlparse==0.2.4
-Twisted==17.9.0
+Twisted==22.2.0
 unattended-upgrades==0.1
 urllib3==1.22
 zope.interface==4.3.2
